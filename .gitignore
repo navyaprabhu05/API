@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+.env
+package-lock.json
+
+# Firebase service account keys (DO NOT COMMIT THESE)
+api/api/firestore-api/serviceAccountKey.json
+dummy_data/dummy_data/serviceAccountKey.json
+
+# Python
+*.pyc
+__pycache__/
+
+# Logs
+logs/
+*.log
+
+**/serviceAccountKey.json

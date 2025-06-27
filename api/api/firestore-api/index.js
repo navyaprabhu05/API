@@ -2,8 +2,9 @@ const express = require("express");
 const admin = require("firebase-admin");
 const app = express();
 
-// === Firebase Setup ===
-const serviceAccount = require("./serviceAccountKey.json");
+// === Firebase Setup using base64 env variable ===
+const decodedKey = Buffer.from(process.env.FIREBASE_KEY, "base64").toString("utf-8");
+const serviceAccount = JSON.parse(decodedKey);
 
 if (!admin.apps.length) {
   admin.initializeApp({
@@ -77,7 +78,7 @@ app.get("/device/:id/latest", async (req, res) => {
   }
 });
 
-// === 3. Get 1-Hour Averaged Data (if ≥ 45 points) ===
+// === 3. Get 1-Hour Averaged Data ===
 app.get("/device/:id/hourly", async (req, res) => {
   const formatIST = req.query.format === "ist";
   const id = req.params.id;
@@ -121,7 +122,7 @@ app.get("/device/:id/hourly", async (req, res) => {
   }
 });
 
-// === 4. Get 15-Minute Interval Averages (Last 1 Hour) ===
+// === 4. Get 15-Minute Interval Averages ===
 app.get("/device/:id/15min", async (req, res) => {
   const formatIST = req.query.format === "ist";
   const id = req.params.id;
@@ -180,5 +181,5 @@ app.get("/device/:id/15min", async (req, res) => {
   }
 });
 
-// === Export app for Vercel ===
+// === Export for Vercel ===
 module.exports = app;
