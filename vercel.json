@@ -8,7 +8,11 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/get-latest",
+      "dest": "api/api/firestore-api/index.js"
+    },
+    {
+      "src": "/device/(.*)",
       "dest": "api/api/firestore-api/index.js"
     }
   ]
