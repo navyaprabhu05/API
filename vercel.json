@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/api/firestore-api/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/get-latest",
+      "dest": "api/api/firestore-api/server.js"
+    },
+    {
+      "src": "/device/(.*)",
+      "dest": "api/api/firestore-api/server.js"
+    }
+  ]
+}

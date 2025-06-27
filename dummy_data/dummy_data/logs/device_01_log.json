@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2025-06-25T13:48:42.546638",
+    "device_id": "device_01",
+    "pm25": 48.1,
+    "pm10": 57.5,
+    "temperature": 38.6,
+    "humidity": 65.2
+  },
+  {
+    "timestamp": "2025-06-25T13:49:16.092984",
+    "device_id": "device_01",
+    "pm25": 37.7,
+    "pm10": 67.5,
+    "temperature": 32.4,
+    "humidity": 62.0
+  },
+  {
+    "timestamp": "2025-06-25T13:49:48.156664",
+    "device_id": "device_01",
+    "pm25": 101.6,
+    "pm10": 85.1,
+    "temperature": 31.0,
+    "humidity": 57.4
+  },
+  {
+    "timestamp": "2025-06-25T13:50:20.201503",
+    "device_id": "device_01",
+    "pm25": 95.2,
+    "pm10": 35.8,
+    "temperature": 24.8,
+    "humidity": 36.1
+  },
+  {
+    "timestamp": "2025-06-25T13:50:52.195601",
+    "device_id": "device_01",
+    "pm25": 117.0,
+    "pm10": 71.7,
+    "temperature": 24.3,
+    "humidity": 32.5
+  },
+  {
+    "timestamp": "2025-06-25T13:51:24.298068",
+    "device_id": "device_01",
+    "pm25": 36.9,
+    "pm10": 157.7,
+    "temperature": 33.6,
+    "humidity": 49.2
+  }
+]
