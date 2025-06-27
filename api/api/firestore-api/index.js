@@ -2,15 +2,15 @@ const express = require("express");
 const admin = require("firebase-admin");
 const app = express();
 
-// === Firebase Setup using base64 env variable ===
-const decodedKey = Buffer.from(process.env.FIREBASE_KEY, "base64").toString("utf-8");
-const serviceAccount = JSON.parse(decodedKey);
+// === Firebase Setup using local file ===
+const serviceAccount = require("./serviceAccounKey.json");
 
 if (!admin.apps.length) {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
   });
 }
+
 
 const db = admin.firestore();
 const COLLECTION = "air_quality_data";
